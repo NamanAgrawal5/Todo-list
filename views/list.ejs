@@ -1,0 +1,21 @@
+<%- include("header") -%>
+    <!-- <img src="https://w0.peakpx.com/wallpaper/941/267/HD-wallpaper-profesor-la-casa-de-papel.jpg" alt=""> -->
+    <div class="box" id="heading">
+        <h1>
+            <%= listTitle %>
+        </h1>
+    </div>
+    <div class="box">
+        <% for(var i=0;i<Items.length;i++){ %>
+        <div class="item">
+            <input type="checkbox">
+            <p><%= Items[i] %></p>
+        </div>
+        <% } %>
+        <form class="item" action="/" method="post">
+            <input type="text" name="newItem" placeholder="New Item" autocomplete="off">
+            <button type="submit" name="list" value= <%= listTitle %> >+</button>
+        </form>
+        </div>
+            
+<%- include("footer") -%>
